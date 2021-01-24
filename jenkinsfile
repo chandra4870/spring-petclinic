@@ -1,0 +1,5 @@
+node ('hms1') {
+    stage ('git') {
+        git 'https://github.com/chandra4870/spring-petclinic.git'
+    }
+}
