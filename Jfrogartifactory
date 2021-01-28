@@ -1,0 +1,12 @@
+wget https://bintray.com/jfrog/artifactory/download_file?file_path=org%2Fartifactory%2Fcpp%2Fce%2Fjfrog-artifactory-cpp-ce%2F7.12.6%2Fjfrog-artifactory-cpp-ce-7.12.6-linux.tar.gz
+mv {old name} artifactory-cpp-ce-7.12.6
+tar -xvzf artifactory-cpp-ce-7.12.6
+cd artifactory-cpp-ce-7.12.6
+cd app
+cd bin
+./artifactory.sh start
+
+sudo firewall-cmd --premanent --Zone=public --add-port=8081/ tcp
+sudo firewall-cmd --premanent --Zone=public --add-port=8082/ tcp
+
+sudo firewall-cmd --reload
